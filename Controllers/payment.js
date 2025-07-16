@@ -1,9 +1,7 @@
 const jwt = require("jsonwebtoken"); // Import the jsonwebtoken library
 const PayPalOrder = require("../Models/PayPalOrder");
-const client_id =
-  "AcbZfLMOatDo0kT1k3isgHk6i9ckW6QEG-X-Ak6ZdkLrHn-LjW7rDSK4MeJ1BUj8w9I8wqvZzuyPlZmi";
-const client_secret =
-  "EM5CYSPGQdkO7N30H6nCU3bjA5_EjPd0sJB82DDY7SWfXI5XdvkWATZCzdPjihN1qZEyXpt5cnZ98rUt";
+const client_id = process.env.CLIENT_ID;
+const client_secret = process.env.CLIENT_SECRET;
 const endpoint_url = "https://api-m.sandbox.paypal.com";
 const stripe = require("stripe")(process.env.STRIPE_SK_KEY);
 const uuid = require("uuid").v4;
